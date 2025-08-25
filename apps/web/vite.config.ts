@@ -1,16 +1,17 @@
-// /apps/web/vite.config.ts
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+﻿import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  css: {
+    postcss: null // disable postcss auto-loading
+  },
   server: {
     port: 5173,
     strictPort: true
   },
   build: {
     sourcemap: true,
-    outDir: 'dist'
+    outDir: "dist"
   }
 });
